@@ -1,4 +1,4 @@
-# webhid-barcode-scanner
+# webserial-customer-display
 
 This is an library that allows you to use customer displays using WebSerial. 
 
@@ -19,7 +19,7 @@ Load the `webserial-customer-display.umd.js` file in the browser and instantiate
     </script>
 
 
-Or import the `webserial-barcode-scanner.esm.js` module:
+Or import the `webserial-customer-display.esm.js` module:
 
     import WebSerialCustomerDisplay from 'webserial-customer-display.esm.js';
 
