@@ -1,0 +1,47 @@
+{
+  "name": "webserial-customer-display",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+      "browser": {
+          "import": "./dist/thermal-printer-encoder.esm.js",
+          "require": "./dist/thermal-printer-encoder.umd.js",
+          "script": "./dist/thermal-printer-encoder.umd.js"
+      }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NielsLeenheer/WebSerialCustomerDisplay.git"
+  },
+  "keywords": [
+    "serial",
+    "webserial",
+    "display",
+    "customerdisplay",
+    "bixalon",
+    "digipos",
+    "glacetron"
+  ],
+  "author": "Niels Leenheer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NielsLeenheer/WebSerialCustomerDisplay/issues"
+  },
+  "homepage": "https://github.com/NielsLeenheer/WebSerialCustomerDisplay#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-terser": "^0.4.1",
+    "rollup": "^3.20.7"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "codepage-encoder": "^2.0.2"
+  }
+}
