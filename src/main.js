@@ -129,11 +129,20 @@ class WebSerialCustomerDisplay {
 	}
 
 	async line(value) {
-		let line = (value + ' '.repeat(20)).substring(0, 20);
-		let data = this._internal.language.encode(line);
+		if (value instanceof Array) {
+			let line;
 
-		this._state.lines[0] = this._state.lines[1];
-		this._state.lines[1] = data;
+			line = value.length >= 1 ? value[0] : '';
+			this._state.lines[0] = this._internal.language.encode((line + ' '.repeat(20)).substring(0, 20));
+
+			line = value.length >= 2 ? value[1] : '';
+			this._state.lines[1] = this._internal.language.encode((line + ' '.repeat(20)).substring(0, 20));
+		}
+
+		if (typeof value == 'string') {
+			this._state.lines[0] = this._state.lines[1];
+			this._state.lines[1] = this._internal.language.encode((value + ' '.repeat(20)).substring(0, 20));
+		}
 
 		await this._internal.writer.write(this._internal.language.clear());
 		await this._internal.writer.write(this._state.lines[0]);
