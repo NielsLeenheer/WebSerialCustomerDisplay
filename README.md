@@ -141,6 +141,6 @@ Customer displays don't support UTF-8 or any other unicode encoding, instead the
 
 
 
-### License
+## License
 
 MIT

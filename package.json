@@ -4,11 +4,12 @@
   "type": "module",
   "exports": {
       "browser": {
-          "import": "./dist/thermal-printer-encoder.esm.js",
-          "require": "./dist/thermal-printer-encoder.umd.js",
-          "script": "./dist/thermal-printer-encoder.umd.js"
+          "import": "./dist/webserial-customer-display.esm.js",
+          "require": "./dist/webserial-customer-display.umd.js",
+          "script": "./dist/webserial-customer-display.umd.js"
       }
   },
+  "module": "src/main.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NielsLeenheer/WebSerialCustomerDisplay.git"
