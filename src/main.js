@@ -70,6 +70,7 @@ class WebSerialCustomerDisplay {
 			return;
 		}
 
+		this._internal.writer.releaseLock();
 		await this._internal.port.close();
 
 		this._internal.port = null;
