@@ -1,5 +1,5 @@
 {
-  "name": "webserial-customer-display",
+  "name": "@point-of-sale/webserial-customer-display",
   "version": "1.0.0",
   "type": "module",
   "exports": {
